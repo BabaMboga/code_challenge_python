@@ -29,4 +29,5 @@ class Magazine:
     def contributors(self):
         return list({article.author() for article in self._articles})
     
-    
+    @classmethod
+    def find_by_name()
