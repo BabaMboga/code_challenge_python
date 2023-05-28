@@ -30,4 +30,22 @@ class Magazine:
         return list({article.author() for article in self._articles})
     
     @classmethod
-    def find_by_name()
+    def find_by_name(cls, name):
+        for magazine in cls.magazines_list:
+            if magazine.name() == name:
+                return magazine
+        return None
+    
+    @classmethod
+    def article_titles(cls):
+        return [article.title() for magazine in cls.magazines_list for article in magazine._articles]
+    
+    def contributing_authors(self):
+        contributing_authors = []
+        author_magazine_count = {}
+        for article in self._articles:
+            author = article.author()
+            author_magazine_count[author] = author_magazine_count.get(author, 0) + 1
+            if author_magazine_count[author] > 2 and author not in contributing_authors:
+                contributing_authors.append(author)
+        return contributing_authors
