@@ -19,3 +19,7 @@ class Article:
     #returns the author for that given article
     def author(self):
         return self._author
+    
+    #returns the magazine for that given article
+    def magazine(self):
+        return self._magazine

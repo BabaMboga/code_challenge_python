@@ -1,9 +1,12 @@
+
+
 class Magazine:
     magazines_list = []
 
     def __init__(self, name, category):
         self.name = name
         self.category = category
+        self.articles = []
         self.magazines_list.append(self)
 
     #name can be changed
@@ -22,3 +25,8 @@ class Magazine:
     @classmethod
     def all(cls):
         return cls.magazines_list
+    
+    def contributors(self):
+        return list({article.author() for article in self._articles})
+    
+    
