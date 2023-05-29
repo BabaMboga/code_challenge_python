@@ -1,7 +1,9 @@
-
+# from Author import Author
+# from Article import Article
 
 class Magazine:
     magazines_list = []
+   
 
     #magazine is initialised with a name as a string and a category as a string
     def __init__(self, name, category):

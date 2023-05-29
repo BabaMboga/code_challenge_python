@@ -1,5 +1,5 @@
 from Article import Article
-from Magazine import Magazine
+
 
 class Author:
     #Author initialised with name as a string

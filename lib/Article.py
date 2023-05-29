@@ -16,6 +16,8 @@ class Article:
         self.title = title
         self.articles_list.append(self)
 
+    
+
     #return the title for that given article
     def title(self):
         return self.title
@@ -32,3 +34,6 @@ class Article:
     #returns the magazine for that given article
     def magazine(self):
         return self._magazine
+
+# new_article = Article('Collins', 'Times', 'Love')
+# print(new_article)
