@@ -1,12 +1,15 @@
 from Article import Article
 
 class Author:
+    #Author initialised with name as a string
     def __init__(self,name):
         self.name = name
         self.articles_list = []
+    #name cannot be changed after initialisation
 
+    #returns the name of the author
     def name(self):
-        return self._name
+        return self.name
     
     #returns a list of article instances the author has written 
     def articles(self):

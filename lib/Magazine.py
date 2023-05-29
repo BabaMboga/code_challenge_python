@@ -3,6 +3,7 @@
 class Magazine:
     magazines_list = []
 
+    #magazine is initialised with a name as a string and a category as a string
     def __init__(self, name, category):
         self.name = name
         self.category = category
@@ -11,15 +12,19 @@ class Magazine:
 
     #name can be changed
     def set_name(self, new_name):
-        self._name = new_name
+        self.name = new_name
+
+    #category can be changed
+    def set_category(self, new_category):
+        self.category = new_category
 
     #returns name of the magazine
     def name(self):
-        return self._name
+        return self.name
     
     #returns category
     def category(self):
-        return self._category
+        return self.category
     
     #returns a list of all magazine instances
     @classmethod
