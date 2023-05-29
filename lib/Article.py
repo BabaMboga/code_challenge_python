@@ -1,6 +1,15 @@
+from Author import Author
+from Magazine import Magazine
+
+author = Author("John Doe")
+magazine = Magazine("Rolling Stone", "Glamour")
+
 class Article:
     articles_list = []
+    # author = Author("John Doe")
+    # magazine = Magazine("Rolling Stone", "Glamour")
 
+    #Article is initialized with an author as an Author object, a magazine as an Magazine object and title as string
     def __init__(self, author, magazine, title):
         self.author = author
         self.magazine = magazine
